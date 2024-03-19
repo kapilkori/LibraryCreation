@@ -1,4 +1,4 @@
-package com.test.room_crud
+package com.test.librarycreation
 
 class NoteRepository(private val db: NoteDao) {
 

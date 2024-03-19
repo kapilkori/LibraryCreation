@@ -8,11 +8,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
+class NoteViewModel(private val repository: com.test.librarycreation.NoteRepository) : ViewModel() {
 
-    private val allNotes = MutableLiveData<List<Note>>()
+    private val allNotes = MutableLiveData<List<com.test.librarycreation.Note>>()
 
-    fun getAllNotes(): LiveData<List<Note>> {
+    fun getAllNotes(): LiveData<List<com.test.librarycreation.Note>> {
         CoroutineScope(Dispatchers.IO).launch {
             allNotes.postValue(repository.getAllNotes())
         }
@@ -20,20 +20,20 @@ class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
         return allNotes
     }
 
-    suspend fun insert(note: Note) {
+    suspend fun insert(note: com.test.librarycreation.Note) {
         repository.insert(note)
     }
 
-    suspend fun update(note: Note) {
+    suspend fun update(note: com.test.librarycreation.Note) {
         repository.update(note)
     }
 
-    suspend fun delete(note: Note) {
+    suspend fun delete(note: com.test.librarycreation.Note) {
         repository.delete(note)
     }
 }
 
-class WordViewModelFactory(private val repository: NoteRepository) : ViewModelProvider.Factory {
+class WordViewModelFactory(private val repository: com.test.librarycreation.NoteRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(NoteViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
