@@ -48,13 +48,25 @@ dependencies {
     kapt("androidx.room:room-compiler:2.6.1")
 }
 
-configure<PublishingExtension> {
-    publications.create<MavenPublication>("room-crud") {
-        groupId = "com.github.kapilkori"
-        artifactId = "room-crud"
-        version = "0.0.6"
-    }
-    repositories {
-        mavenLocal()
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("room-crud") {
+                groupId = "com.github.kapilkori"
+                artifactId = "room-crud"
+                version = "0.0.6"
+            }
+        }
     }
 }
+
+//configure<PublishingExtension> {
+//    publications.create<MavenPublication>("room-crud") {
+//        groupId = "com.github.kapilkori"
+//        artifactId = "room-crud"
+//        version = "0.0.6"
+//    }
+//    repositories {
+//        mavenLocal()
+//    }
+//}
