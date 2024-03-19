@@ -1,4 +1,4 @@
-package com.test.librarycreation
+package com.test.room_crud
 
 import android.app.Application
 import kotlinx.coroutines.CoroutineScope

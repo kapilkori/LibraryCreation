@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "LibraryCreation"
 include(":app")
+include(":app:room-crud")

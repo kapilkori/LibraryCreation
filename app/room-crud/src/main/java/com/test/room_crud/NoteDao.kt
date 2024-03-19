@@ -1,4 +1,4 @@
-package com.test.librarycreation
+package com.test.room_crud
 
 import androidx.room.Dao
 import androidx.room.Delete

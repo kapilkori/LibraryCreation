@@ -12,9 +12,9 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: NoteViewModel by viewModels {
-        WordViewModelFactory((application as MyApplication).repository)
-    }
+//    private val viewModel: com.test.room_crud.NoteViewModel by viewModels {
+//        com.test.room_crud.WordViewModelFactory((application as com.test.room_crud.MyApplication).repository)
+//    }
 
     private lateinit var recyclerView: RecyclerView
 
@@ -29,12 +29,12 @@ class MainActivity : AppCompatActivity() {
 
             CoroutineScope(Dispatchers.IO).launch {
                 for (i in 0..10) {
-                    viewModel.insert(
-                        Note(
-                            title = "Yes, $i",
-                            content = "Cheers to yes"
-                        )
-                    )
+//                    viewModel.insert(
+//                        com.test.room_crud.Note(
+//                            title = "Yes, $i",
+//                            content = "Cheers to yes"
+//                        )
+//                    )
                 }
             }
         }
@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        viewModel.getAllNotes().observe(this) { notes ->
-            Log.e("TAG", "onCreate: $notes")
-        }
+//        viewModel.getAllNotes().observe(this) { notes ->
+//            Log.e("TAG", "onCreate: $notes")
+//        }
     }
 }
