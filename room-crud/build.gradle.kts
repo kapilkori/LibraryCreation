@@ -52,7 +52,7 @@ configure<PublishingExtension> {
     publications.create<MavenPublication>("RoomCRUD") {
         groupId = "com.github.kapilkori"
         artifactId = "Room-CRUD"
-        version = "0.0.5"
+        version = "0.0.6"
     }
     repositories {
         mavenLocal()
