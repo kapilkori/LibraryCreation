@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "LibraryCreation"
 include(":app")
-include(":app:mytoastlibrary")
