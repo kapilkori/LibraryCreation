@@ -49,9 +49,9 @@ dependencies {
 }
 
 configure<PublishingExtension> {
-    publications.create<MavenPublication>("RoomCRUD") {
+    publications.create<MavenPublication>("room-crud") {
         groupId = "com.github.kapilkori"
-        artifactId = "Room-CRUD"
+        artifactId = "room-crud"
         version = "0.0.6"
     }
     repositories {
